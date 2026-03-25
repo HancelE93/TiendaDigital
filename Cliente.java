@@ -5,18 +5,26 @@ public class Cliente {
     private int totalCompras;
 
 // Constructor: 
-public Cliente(String nombre, String correo, double saldo) {
-    this.nombre = (nombre == null || nombre.trim().isEmpty())
-            ? "Sin nombre"
-            : nombre.trim();
+    public Cliente(String nombre, String correo, double saldo) {
+        this.nombre = (nombre == null || nombre.trim().isEmpty())
+                ? "Sin nombre"
+                : nombre.trim();
 
-    this.correo = (correo != null && correo.contains("@") && correo.indexOf("@") < correo.lastIndexOf("."))
-            ? correo
-            : "sin@email.com";
+        this.correo = (correo != null && correo.contains("@") && correo.indexOf("@") < correo.lastIndexOf("."))
+                ? correo.trim()
+                : "sin@email.com";
 
-    this.saldo = (saldo < 0) ? 0 : saldo;
+        this.saldo = (saldo < 0) ? 0 : saldo;
 
-    this.totalCompras = 0;
-}
+        this.totalCompras = 0;
+    }
+
+// Método: mostrarPerfil
+    public void mostrarPerfil() {
+        System.out.println("Cliente: " + nombre);
+        System.out.println("Correo: " + correo);
+        System.out.println("Saldo: $" + saldo);
+        System.out.println("Compras realizadas: " + totalCompras);
+    }
 
 }
