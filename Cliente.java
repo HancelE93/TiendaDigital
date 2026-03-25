@@ -34,7 +34,7 @@ public class Cliente {
             totalCompras++;
             System.out.println("Compra exitosa por $" + monto + ". Saldo restante: $" + saldo);
         } else {
-        System.out.println("Saldo insuficiente. Saldo actual: $" + saldo);
+            System.out.println("Saldo insuficiente. Saldo actual: $" + saldo);
         }
     }
 
