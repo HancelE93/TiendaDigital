@@ -11,4 +11,15 @@ public class Carrito {
         this.cantidad = 0;
     }
 
+    public void agregarProducto(String nombre, double precio) {
+        if (cantidad < 10) {
+            productos[cantidad] = nombre;
+            precios[cantidad] = precio;
+            cantidad++;
+            System.out.println("Producto agregado: " + nombre + " ($" + precio + ")");
+        } else {
+            System.out.println("El carrito está lleno. No se pueden agregar más productos.");
+        }
+    }
+
 }
