@@ -22,4 +22,13 @@ public class Carrito {
         }
     }
 
+    public double calcularTotal() {
+        double total = 0;
+        for (int i = 0; i < cantidad; i++) {
+            total += precios[i];
+        }
+        System.out.println("Total del carrito: $" + total);
+        return total;
+    }
+
 }
