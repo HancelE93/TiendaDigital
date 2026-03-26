@@ -12,7 +12,7 @@ public class Main {
         // ── Integrante 2: Cliente ───────────────────────────────
         Cliente cliente1 = new Cliente("David", "david@email.com", 2000.0);
         cliente1.mostrarPerfil();
-        cliente1.realizarCompra(producto1, 1);
+        cliente1.realizarCompra(1200.0); // monto de la compra
         cliente1.mostrarSaldo();
 
         // ── Integrante 3: Carrito ───────────────────────────────
